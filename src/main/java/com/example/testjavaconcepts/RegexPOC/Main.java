@@ -16,7 +16,8 @@ public class Main {
     }
 
     public static void ScannerPOC(){
-        Scanner scanner = new Scanner("Manzana/Pera/Banana").useDelimiter("/");
+        Scanner scanner = new Scanner("Manzana/Pera/Banana");
+        scanner.useDelimiter("/");
         while(scanner.hasNext()){
             String token = scanner.next();
             System.out.println(token);
