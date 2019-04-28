@@ -1,0 +1,122 @@
+- @Query
+    Spring Boot Data JPA @Query tutorial shows how to create
+    custom queries with Data JPA @Query.
+
+
+- @NamedQuery
+    Spring Boot Data JPA @NamedQuery tutorial shows how to create
+    custom queries with JPA @NamedQuery.
+
+    @NamedQuery annotation is a predefined query that we create
+    and associate with a container-managed entity. @Query
+    annotation is a similar annotation, which declares finder
+    queries directly on repository methods. While @NamedQuery is
+    used on domain classes, Spring Data JPA @Query annotation is
+    used on Repository interface. This frees the domain classes
+    from persistence specific information, which is a good thing.
+
+
+https://www.amitph.com/spring-data-jpa-query-methods/
+
+6 Query Methods to SQL Queries
+    In this section we will see how Spring derives SQL queries from the method names and also see how to write more complex queries in the form of query methods. To parse the query method names into the actual queries, Spring uses certain strategy. If we follow these strategies we can easily write the query methods. Let’s see how.
+
+    6.1 Retrieve Entities
+        No wonder all of the query methods will be all about retrieving or finding certain entities from the table. Spring lets us starting the query method names by keywords like find..By, get...By, read..By, count..By, and query..By.
+
+        All of the patterns except count..By are aliases of each other. All of the methods below will behave similarly
+
+        Dog findById(Long id);
+        Dog readById(Long id);
+        Dog getById(Long id);
+        Dog queryById(Long id);
+
+        The count..By obviously returns count of records and it works like below
+
+        Integer countByName(String name);
+
+    6.2 Find By Multiple Fields
+        All the cases we have seen are find by single field. What if we have a combination of more than one field or condition?
+        See the below examples.
+
+        List<Dog> findByAgeAndHeight(Integer age, double height);
+        List<Dog> findByAgeAndNameAndColor(Integer age, String name, String color);
+        List<Dog> findByNameOrAge(String name, Integer age);
+        List<Dog> findByNameIgnoreCaseAndColor(String name, String color);
+
+        1: Find by matching age and height.
+        2: Find by age, name, and color.
+        3: Find by name or age.
+        4: Find By Name (ignoring case) and color.
+
+    6.3 Limiting Results
+        Sometimes we may want to limit the number of records we get back. There is a really easy way of doing in to Spring Data JPA.
+
+        Dog findFirstByName(String name);
+        Dog findTopByName(String name);
+        List<Dog> findTop10ByColor(String color);
+
+        The first two lines are identical and they will return very first Dog that has a matching name.
+        The third query returns first 10 Dogs who have the given color.
+
+        Let’s find the youngest Dog from the database.
+
+        Dog findTopByOrderByBirthDateDesc();
+
+    6.3 More Complex Queries
+
+        List<Dog> findByNameContaining(String subName);
+        List<Dog> findByNameStartingWith(String subName);
+
+        1: Finds Dogs whose name contains given String.
+        2: Finds Dogs whose name starts with the given String.
+
+        List<Dog> findByHeightLessThan(double height);
+        List<Dog> findByAgeLessThanOrHeightGreaterThan(Integer age, double height);
+        List<Dog> findByAgeGreaterThanAndAgeLessThan(Integer ageStart, Integer ageEnd);
+        List<Dog> findByAgeGreaterThanEqual(Integer age);
+        List<Dog> findByDateOfBirthBetween(Date start, Date end);
+
+        1: Where height is less than given height.
+        2: Where either age is less than given age or height is greater than given height.
+        3: Where age is in between the given start age and end age.
+        4: Where age is greater than or equal to the given age.
+        5: Where date of birth is between the given date range.
+
+###########################
+# HQL vs JPQL vs Criteria #
+###########################
+-The Hibernate Query Language (HQL) and Java Persistence Query Language (JPQL) are both
+object model focused query languages similar in nature to SQL. JPQL is a heavily-inspired-by
+subset of HQL. A JPQL query is always a valid HQL query, the reverse is not true however
+-Both HQL and JPQL are non-type-safe ways to perform query operations. Criteria queries offer
+a type-safe approach to querying.
+
+Criteria Queries es genial para definir dynamic queries. For example it is much easier
+to add some ordering dynamically or leave some parts (e.g. restrictions) out depending on some parameter.
+On the other hand I'm using HQL for static and complex queries, because it's much easier
+to understand/read HQL. Also, HQL is a bit more powerful, I think, e.g. for different join types.
+
++--------------+
+|  HQL         |
+|    +------+  |
+|    |JPQL  |  |
+|    |      |  |
+|    +------+  |
++--------------+
+
+Resumen recomendaciones.
+- Query Dinamicas -> Criteria API
+- Query Estaticas -> HQL
+
+######################
+#INNER JOIN ON clause#
+######################
+Hibernate HQL Inner Join
+ - An issue that I came across recently was hibernate's HQL language inability to handle "inner join on" clauses. If your domain entity model has relationships defined between the related objects then something like
+    Query query = session.createQuery("from Cat cat inner join Owner owner where owner.Name ='Duke'");
+    will work as intended. HQL knows how to join the Cat and Owner classes based on the association mapping in the hbm.xml file. Since the association is defined in the mapping file you don't really need to stipulate the join in the query. E.G "from Cat cat where cat.Owner.Name='Duke'" will work too. Explicit joins in this usage are mainly used to initialise collections and many-to-one mappings. i.e to avoid lazy load errors.
+
+    En resumen HQL no necesitas usar la clausula INNER JOIN ON, simplemente usas INNER JOIN ya que
+    Hibernate es inteligente como para ver sobre que columna tiene que hacer el join, es decir
+    que columna se repite en tabla1 y en la otra tabla2.
