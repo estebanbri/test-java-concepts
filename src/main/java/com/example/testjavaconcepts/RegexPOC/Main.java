@@ -25,11 +25,17 @@ public class Main {
         scanner.close();
     }
 
+
     public static void StringPOC(){
         String input = ("Kiwi/Naranja/Anana");
         String[] tokens = input.split("/");
         for(String token: tokens){
             System.out.println(token);
         }
+        String json = "{\n" +
+                "  \"marca\": \"fiat\",\n" +
+                "  \"cantidad_ruedas\" : 3,\n" +
+                "  \"nombre\": \"json\"\n" +
+                "}";
     }
 }
