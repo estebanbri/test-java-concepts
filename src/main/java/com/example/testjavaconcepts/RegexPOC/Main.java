@@ -32,10 +32,5 @@ public class Main {
         for(String token: tokens){
             System.out.println(token);
         }
-        String json = "{\n" +
-                "  \"marca\": \"fiat\",\n" +
-                "  \"cantidad_ruedas\" : 3,\n" +
-                "  \"nombre\": \"json\"\n" +
-                "}";
     }
 }
