@@ -38,4 +38,19 @@ public class Main {
 
         System.out.println(resultado);
     }
+
+    // Pattern class: String[] split(String input) este metodo es el que se ejecuta behind the scenes cuando usas el metodo split() de la clase String
+    public static void PatternSplitPOC(){
+        String input = "esteban,bricenoSOY_EL_SEPARADORandres,sati";
+
+        Pattern pattern = Pattern.compile("SOY_EL_SEPARADOR");
+
+        String[] tokens = pattern.split(input);
+
+        for (String token : tokens){
+            System.out.println(token);
+        }
+
+
+    }
 }
