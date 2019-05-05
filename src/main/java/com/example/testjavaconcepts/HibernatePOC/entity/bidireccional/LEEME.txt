@@ -1,0 +1,21 @@
+Bidirectional Relationships
+In a bidirectional relationship, each entity has a relationship field or property that refers
+to the other entity. Through the relationship field or property, an entity class’s code can access
+its related object. If an entity has a related field, the entity is said to “know” about its
+related object. For example, if Order knows what LineItem instances it has and if LineItem
+knows what Order it belongs to, they have a bidirectional relationship.
+
+Bidirectional relationships must follow these rules:
+
+    - The inverse side of a bidirectional relationship must refer to its owning side by
+      using the mappedBy element of the @OneToOne, @OneToMany, or @ManyToMany annotation.
+      The mappedBy element designates the property or field in the entity that is the owner
+      of the relationship.
+
+    - The many side of many-to-one bidirectional relationships must not define
+      the mappedBy element. The many side is always the owning side of the relationship.
+
+    - For one-to-one bidirectional relationships, the owning side corresponds to the side
+      that contains the corresponding foreign key.
+
+    - For many-to-many bidirectional relationships, either side may be the owning side.

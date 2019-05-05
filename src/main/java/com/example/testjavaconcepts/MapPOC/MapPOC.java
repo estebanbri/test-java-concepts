@@ -1,4 +1,4 @@
-package com.example.testjavaconcepts;
+package com.example.testjavaconcepts.MapPOC;
 
 import java.util.HashMap;
 import java.util.Map;
