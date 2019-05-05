@@ -10,7 +10,7 @@ public class Caramelo extends Decorador {
 
     @Override
     public int cost() {
-        System.out.println("Add On = Caramelo | $22");
+        System.out.println("Agregando costo: CARAMELO");
         return bebida.cost() + 22;   // bebida.cost() ejecuta el metodo cost() dentro de Expreso
     }
 }
