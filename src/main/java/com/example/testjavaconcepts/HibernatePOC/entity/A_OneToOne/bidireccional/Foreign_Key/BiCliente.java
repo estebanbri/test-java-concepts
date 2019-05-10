@@ -1,11 +1,9 @@
-package com.example.testjavaconcepts.HibernatePOC.entity.A_OneToOne.unidireccional.Foreign_Key;
-
-import com.example.testjavaconcepts.HibernatePOC.entity.A_OneToOne.bidireccional.Foreign_Key.BIPasaporte;
+package com.example.testjavaconcepts.HibernatePOC.entity.A_OneToOne.bidireccional.Foreign_Key;
 
 import javax.persistence.*;
 
 @Entity
-public class Cliente {
+public class BiCliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,21 +11,21 @@ public class Cliente {
 
     private String nombre;
 
-    @OneToOne(cascade= CascadeType.ALL)
+    @OneToOne(cascade= CascadeType.ALL, mappedBy = "cliente")
     @JoinColumn(name="pasaporte_fk")
-    private Pasaporte pasaporte;
+    private BIPasaporte pasaporte;
 
-    public Cliente() {
+    public BiCliente() {
     }
 
-    public Cliente(String nombre) {
+    public BiCliente(String nombre) {
         this.nombre = nombre;
     }
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
-    public Pasaporte getPasaporte() { return pasaporte; }
-    public void setPasaporte(Pasaporte pasaporte) { this.pasaporte = pasaporte;}
+    public BIPasaporte getPasaporte() { return pasaporte; }
+    public void setPasaporte(BIPasaporte pasaporte) { this.pasaporte = pasaporte;}
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
 
@@ -41,11 +39,7 @@ public class Cliente {
     }
 }
 
-//  +-----------------------+
-//  |         Cliente       |
-//  +--------+--------------+
-//  |   ID   | PASAPORTE_FK |
-//  +--------+--------------+
+
 
 /**
  * Fetching strategy:

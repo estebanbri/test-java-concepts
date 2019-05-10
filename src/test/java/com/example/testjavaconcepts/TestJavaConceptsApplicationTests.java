@@ -30,7 +30,7 @@ public class TestJavaConceptsApplicationTests {
 	@Mock // we can return mocked data when we call a method from this service (creating a mock. This can also be achieved by using org.mockito.mock(..) method)
 	PersonaService personaService;
 
-	@InjectMocks // we can inject the mocked service inside our UserController (injects mock or spy fields into tested objects automatically.)
+	@InjectMocks // we can inject the mocked service inside our PersonaController (injects mock or spy fields into tested objects automatically.)
 	PersonaController personaController;
 
 	@Before

@@ -1,0 +1,11 @@
++--------------+            +---------------+
+|    Address   |            |    STUDENT00  |
++--------------+            +---------------+
+|    ID (PK)   |  <----->   |    ID (PK)(FK)|
++--------------+            +---------------+
+|     CALLE    |            |     NOMBRE    |
++--------------+            +---------------+
+
+Caso: Shared Primary Key.
+La tabla ADDRESS y STUDENT00 tienen la misma PK.
+
