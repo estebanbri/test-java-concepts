@@ -23,6 +23,15 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+/**
+ * GivenWhenThen:
+ *      The essential idea is to break down writing a scenario (or test) into three sections:
+ *
+ *          The GIVEN part describes the state of the world before you begin the behavior you're specifying in this scenario. You can think of it as the pre-conditions to the test.
+ *          The WHEN section is that behavior that you're specifying.
+ *          Finally the THEN section describes the changes you expect due to the specified behavior.
+ */
+
 @RunWith(SpringRunner.class)
 @SpringBootTest // Full Spring Application Context is started
 @AutoConfigureMockMvc // Con estas dos anotaciones @SpringBootTest y @AutoConfigureMockMvc ahora vamos a tener acceso a Spring MVC.
