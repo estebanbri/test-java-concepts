@@ -2,6 +2,8 @@ package com.example.testjavaconcepts.CopyPropertiesPOC;
 
 import org.springframework.beans.BeanUtils;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -10,6 +12,7 @@ public class Main {
         fuente.setId(1L);
         fuente.setNombre("Jose");
         fuente.setApellido("Perez");
+        fuente.setTelefonos(Arrays.asList("154118808","156027569"));
 
         // Target
         Destino destino = new Destino();
