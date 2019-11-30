@@ -4,11 +4,13 @@ import org.springframework.beans.BeanUtils;
 
 public class Main {
     public static void main(String[] args) {
+
         // Source
         Fuente fuente = new Fuente();
         fuente.setId(1L);
         fuente.setNombre("Jose");
         fuente.setApellido("Perez");
+
         // Target
         Destino destino = new Destino();
 
