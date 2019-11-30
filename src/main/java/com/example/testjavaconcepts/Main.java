@@ -24,5 +24,14 @@ public class Main {
     @JsonProperty("ret_status")
     private Integer retStatus;
 
+    public static void main(String[] args) {
+        String s = new String("asd");
+        Class<? extends String> aClass = s.getClass();
+        Class<? extends String> aClass1 = String.class;
+        System.out.println(aClass.getName());
+        System.out.println(aClass.getSimpleName());
+        System.out.println(aClass1.getName());
+        System.out.println(aClass1.getSimpleName());
+    }
 
 }
