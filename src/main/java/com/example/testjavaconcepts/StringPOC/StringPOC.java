@@ -1,5 +1,7 @@
 package com.example.testjavaconcepts.StringPOC;
 
+import java.io.IOException;
+
 public class StringPOC {
     public static void main(String[] args) {
         charAtPOC();
@@ -77,5 +79,6 @@ public class StringPOC {
         String s = "Esteban";
         char c = s.charAt(1);
         System.out.println(c);   // s
+
     }
 }

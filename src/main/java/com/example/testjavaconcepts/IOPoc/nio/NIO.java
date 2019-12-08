@@ -28,4 +28,13 @@ public class NIO {
         Files.write(pathFile, arr);
 
     }
+
+    public static void m1() throws IOException {
+        Path path = Paths.get("");
+        Files.createFile(path);
+        BufferedWriter bw = Files.newBufferedWriter(path);
+        bw.write("hola");
+        bw.newLine();
+
+    }
 }

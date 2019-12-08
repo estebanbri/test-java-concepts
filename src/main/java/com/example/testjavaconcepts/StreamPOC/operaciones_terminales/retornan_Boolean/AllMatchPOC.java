@@ -1,0 +1,28 @@
+package com.example.testjavaconcepts.StreamPOC.operaciones_terminales.retornan_Boolean;
+
+import com.example.testjavaconcepts.StreamPOC.Persona;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class AllMatchPOC {
+    public static void main(String[] args) {
+        List<Persona> personas = Arrays.asList(
+                new Persona("Andres","Sati"),
+                new Persona("Esteban","Briceno"),
+                new Persona("Andres","Briceno"),
+                new Persona("Juan","Perez"));
+
+        Boolean b = m1(personas);
+        System.out.println(b);
+    }
+
+    // Chequear si todas las personas cumplen que todos sus apellidos comienzan con B
+    private static Boolean m1(List<Persona> list){
+        Predicate<Persona> predicate = (persona) -> persona.getApellido().startsWith("B");
+        Boolean b = list.stream()
+                .allMatch(predicate);
+        return b;
+    }
+}

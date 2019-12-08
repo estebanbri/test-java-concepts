@@ -1,0 +1,48 @@
+                    +---------------+
+                    | <<interface>> |
+                    |     List      |
+                    +---------------+
+                   /                 \
+                  /                   \
+        +---------------+                +----------------+
+        |  ArrayList    |                |   LinkedList   |
+        +---------------+                +----------------+
+
+1) What is default initial capacity of ArrayList in java?
+Default initial capacity of ArrayList is 10.
+
+java.util.ArrayList defines private static final variable DEFAULT_CAPACITY to define initial capacity of ArrayList.
+
+        /**
+         * Default initial capacity.
+         */
+     private static final int DEFAULT_CAPACITY = 10;
+
+2) But how ArrayList is resized in java?
+ArrayList’s add method internally calls ensureCapacityInternal method, which calls ensureExplicitCapacity method, which calls grow method, grow method >
+    1 - creates new array of higher capacity and
+    2 - copies existing array to new one and
+    3-  add the new element to the recently array created.
+
+3) Should you change default initial capacity of ArrayList in java?
+Well that is opinion based questions, but default size offers best tradeoff between memory occupied and performance.
+
+I’ll recommend you to go for default initial capacity offered by ArrayList in java.
+
+Keeping ArrayList size very less can be a huge performance set back, because it will be resized very rapidly.
+Example - when it’s initial capacity is kept as 2, on addition of further elements it will be resized to 3,  then 4, then 6, then 9, then 13, then 19 and so on.
+So we saw that resizing of ArrayList was done so rapidly and it may significantly slow down your java application.
+
+But, huge enterprise application which is likely to store high number of objects may be benefited by increasing the default initial capacity offered by  ArrayList in java.
+
+4) Complexity of methods in ArrayList in java >
+Operation/ method
+               Worst case                                            Best case
+add     O(n), when array is full it needs restructuring,              O(1), when array does not need any restructuring.
+        operation runs in amortized constant time.
+remove  O(n), when removal is done from between restructuring         O(1), when removal is done at last position, no restructuring is needed.
+        is needed.
+get     O(1), it is index based structure. So, complexity of          O(1) it is index based structure. So, complexity of  get operation is always done in O(1).
+        get operation is always done in O(1).
+display O(n), because iteration is done over each and every           O(n), because iteration is done over each and every element.
+        element.

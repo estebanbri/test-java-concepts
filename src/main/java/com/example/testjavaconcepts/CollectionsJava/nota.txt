@@ -1,0 +1,30 @@
+Las colecciones pueden clasificarse en:
+
+** Ordered
+    - Los elementos mantienen un orden dentro de la coleccion.
+    - Ej: Una lista numerada de supermercado.
+                    1- Verduras
+                    2- Helado
+
+** UnOrdered
+    - Los elementos no mantienen ningun orden.
+    - Ej: una vaso con lapices de colores dentro.
+
+** Sorted:
+    - Es un tipo de ordenamiento.
+    - Ordenamiento basado en algun criterio.
+    - Ej: Ordenamiento por orden alfabetico.
+
+** UnSorted
+    - No ordenado por ningun criterio
+
+----------------------
+Combinaciones posibles:
+----------------------
+
+*Las colecciones pueden combinarse en:
+    - Ordered y Sorted
+    - Ordered y UnSorted
+    - UnOrdered y UnSorted
+
+    No es posible: UnOrdered y Sorted por que recorda que sorted es un tipo de ordenamiento.
