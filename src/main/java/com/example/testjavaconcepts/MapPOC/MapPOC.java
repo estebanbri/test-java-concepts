@@ -5,10 +5,35 @@ import java.util.Map;
 
 public class MapPOC {
     public static void main(String[] args) {
-        Map<String, String> map = new HashMap(); // recorda que la key no puede repetirse en un Map
+        Map<String, String> map = new HashMap<>();
         map.put("Fruta", "Manzana");
         map.put("Color", "Rojo");
-        recorrerMapPOC1(map);
+
+        //String value1 = map.getOrDefault("Color", "NO_EXISTE");
+        //System.out.println(value1);
+
+        //String value2 = map.get("11.164.357");
+        //System.out.println(value2);
+
+
+        //recorrerMapPOC1(map);
+       // map.compute("Color", (key, oldValue)->  oldValue.concat(", Azul"));
+       // System.out.println(map);
+
+        //map.compute("Animal", (key, oldValue)->  oldValue.concat(", Perro"));
+        //System.out.println(map);
+
+        //System.out.println(map);
+        //map.computeIfAbsent("Animal", key -> "Perro");
+        //System.out.println(map);
+
+         //map.computeIfAbsent("Animal", key -> "Gato");
+         //System.out.println(map);
+        map.replace("Color", "Azul");
+        System.out.println(map);
+
+        map.replace("Animal", "Perro");
+        System.out.println(map);
     }
 
     // Java 8
