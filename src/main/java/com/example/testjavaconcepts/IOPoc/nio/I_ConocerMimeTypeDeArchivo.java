@@ -2,9 +2,7 @@ package com.example.testjavaconcepts.IOPoc.nio;
 
 import java.io.IOException;
 import java.nio.file.*;
-import java.nio.file.attribute.BasicFileAttributes;
 
-import static java.nio.file.FileVisitResult.CONTINUE;
 
 public class I_ConocerMimeTypeDeArchivo {
 
