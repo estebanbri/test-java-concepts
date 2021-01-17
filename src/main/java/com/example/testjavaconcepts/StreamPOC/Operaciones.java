@@ -43,7 +43,7 @@ public class Operaciones {
         //flatMap()
         public static Stream<Persona> flatMapPOC(List<List<Persona>> listofList){
             Stream<List<Persona>> stream1 = listofList.stream();
-            Stream<Persona> stream2 = stream1.flatMap((list)-> list.stream()); // Collecion::stream
+            Stream<Persona> stream2 = stream1.flatMap(list-> list.stream()); // Collecion::stream
             return stream2;
         }
 

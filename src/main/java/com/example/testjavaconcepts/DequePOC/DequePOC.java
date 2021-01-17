@@ -39,10 +39,10 @@ public class DequePOC {
         System.out.println("Queue: " + queue);
 
         String valor = queue.pop();
-        System.out.println("Elemento quitado de cima:  " + valor);
+        System.out.println("Elemento quitado de cola:  " + valor);
 
-        System.out.println("Cima: " + queue.peek());
+        System.out.println("Ultimo en la cola: " + queue.peek());
 
-        System.out.println("Stack: " + queue);
+        System.out.println("Cola: " + queue);
     }
 }

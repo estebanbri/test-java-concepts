@@ -12,7 +12,7 @@ public class StringPOC {
         String b = "asd";
         if( a == b ){System.out.println("Meaningful equivalentes");}
 
-        if( a =="asd" ){System.out.println("Meaningful equivalentes");}
+        if( a == "asd" ){System.out.println("Meaningful equivalentes");}
 
         if( a instanceof Object){
             System.out.println("Heredo de Object class");
