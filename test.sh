@@ -5,11 +5,24 @@ echo "Rama actual es $currentBranch"
 output=$(git pull origin master)
 code=$?
 echo $code
-if [ $code -ne 0 ]; then
-    echo "Error: Hubo problemas al hacer merge con develop (Posibles razones: contenido no commiteado o hubo conflicto de merge)"
-    read;
-    exit 1;
-fi
-echo "Merge automatico con develop realizado exitosamente"
-git push
+case $code in
+
+  0)
+    echo "Merge Automatico realizado exitosamente..."
+    git push
+    ;;
+
+  1)
+    echo "Merge Automatico abortado..."
+    ;;
+
+  128)
+    echo "Merge Automatico realizado parcialmente, es necesario resolver conflictos manualmente"
+    ;;
+
+  *)
+    echo "Error: codigo de error no contemplado"
+    ;;
+esac
+
 read;
