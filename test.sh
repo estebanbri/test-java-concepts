@@ -26,4 +26,5 @@ case $code in
     ;;
 esac
 
-read "Presione cualquier tecla para finalizar...";
+echo "Presione cualquier tecla para finalizar...";
+read;
