@@ -25,4 +25,5 @@ case $code in
     echo -e "\e[31mError: codigo de error no contemplado\e[0m"
     ;;
 esac
-read;
+
+read "Presione cualquier tecla para finalizar...";
