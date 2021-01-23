@@ -9,4 +9,5 @@ if [ $code -ne 0 ]; then
     read;
 fi
 echo "Merge automatico con develop realizado exitosamente"
+git push
 read;
