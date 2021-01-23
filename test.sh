@@ -9,8 +9,9 @@ case $code in
 
   0)
     echo "Merge Automatico realizado exitosamente..."
-    echo "Pusheando commit a rama $currentBranch"
+    echo "Pusheando commits a rama $currentBranch"
     git push
+    exit 1
     ;;
 
   1)
