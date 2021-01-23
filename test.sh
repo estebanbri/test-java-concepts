@@ -15,17 +15,17 @@ case $code in
     ;;
 
   1)
-    echo "Merge Automatico realizado parcialmente, es necesario resolver conflictos manualmente"
+    echo "\e[31mMerge Automatico realizado parcialmente, es necesario resolver conflictos manualmente\e[0m"
     read;
     ;;
 
   128)
-    echo "Merge Automatico abortado..."
+    echo "\e[31mMerge Automatico abortado...\e[0m"
     read;
     ;;
 
   *)
-    echo "Error: codigo de error no contemplado"
+    echo "\e[31mError: codigo de error no contemplado\e[0m"
     read;
     ;;
 esac
