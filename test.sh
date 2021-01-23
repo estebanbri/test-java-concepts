@@ -6,7 +6,6 @@ ramaFeature=$1
 
 checkout=$(git checkout "$ramaFeature")
 checkoutStatusCode=$?
-echo $checkoutStatusCode
 
 if [[ $checkoutStatusCode -ne 0 ]];
 then
