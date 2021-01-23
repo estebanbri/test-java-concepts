@@ -13,7 +13,7 @@ case $code in
 
   0)
     echo -e "\e[32mMerge Automatico realizado exitosamente...\e[0m"
-    echo "Pusheando commits a rama $currentBranch"
+    echo "Pusheando commits a rama $ramaFeature"
     git push
     ;;
 
