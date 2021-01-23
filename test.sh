@@ -8,24 +8,21 @@ code=$?
 case $code in
 
   0)
-    echo "Merge Automatico realizado exitosamente..."
+    echo "\e[32mMerge Automatico realizado exitosamente..."
     echo "Pusheando commits a rama $currentBranch"
     git push
-    exit
     ;;
 
   1)
-    echo -e "\e[31mMerge Automatico realizado parcialmente, es necesario resolver conflictos manualmente\e[0m"
-    read;
+    echo -e "\e[31mMerge Automatico realizado parcialmente, es necesario resolver conflictos manualmente"
     ;;
 
   128)
-    echo -e "\e[31mMerge Automatico abortado...\e[0m"
-    read;
+    echo -e "\e[31mMerge Automatico abortado..."
     ;;
 
   *)
-    echo -e "\e[31mError: codigo de error no contemplado\e[0m"
-    read;
+    echo -e "\e[31mError: codigo de error no contemplado"
     ;;
 esac
+read;
