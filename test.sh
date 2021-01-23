@@ -1,8 +1,12 @@
 #!/bin/bash
-echo "Realizando merge automatico con develop"
-currentBranch=$(git branch --show-current)
-echo "Rama actual es $currentBranch"
+echo "*** Realizando merge automatico con develop ***"
+
+ramaFeature=$1
+
+git checkout "$ramaFeature"
+
 output=$(git pull origin master)
+
 code=$?
 
 case $code in
