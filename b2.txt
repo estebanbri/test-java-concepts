@@ -1,2 +1,2 @@
----Linea 1 FileWriter (+ BufferWriter) ---
+---Linea 1 FileWriter (+ BufferWrite) ---
 ---Linea 2 FileWriter (+ BufferWriter) ---
