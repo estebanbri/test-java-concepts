@@ -4,7 +4,7 @@ currentBranch=$(git branch --show-current)
 echo "Rama actual es $currentBranch"
 output=$(git pull origin master)
 code=$?
-echo $code
+
 case $code in
 
   0)
