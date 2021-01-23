@@ -13,11 +13,11 @@ case $code in
     ;;
 
   1)
-    echo "Merge Automatico abortado..."
+    echo "Merge Automatico realizado parcialmente, es necesario resolver conflictos manualmente"
     ;;
 
   128)
-    echo "Merge Automatico realizado parcialmente, es necesario resolver conflictos manualmente"
+    echo "Merge Automatico abortado..."
     ;;
 
   *)
