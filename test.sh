@@ -4,11 +4,18 @@ echo
 
 ramaFeature=$1
 
-git checkout "$ramaFeature"
+checkout=$(git checkout "$ramaFeature")
+checkoutStatusCode=$?
+echo $checkoutStatusCode
 
-output=$(git pull origin master)
+if [[ $checkoutStatusCode -ne 0 ]];
+then
+  echo -e "\e[31mRama $ramaFeature no existe localmente...\e[0m"
+  exit
+fi
 
-code=$?
+pull=$(git pull origin master)
+pullStatusCode=$?
 
 case $code in
 
