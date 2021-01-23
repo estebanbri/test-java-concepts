@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "*** Realizando merge automatico con develop ***"
+echo
 
 ramaFeature=$1
 
