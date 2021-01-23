@@ -14,7 +14,7 @@ case $code in
     ;;
 
   1)
-    echo -e "\e[93Merge Automatico realizado parcialmente, es necesario resolver conflictos manualmente\e[0m"
+    echo -e "\e[93mMerge Automatico realizado parcialmente, es necesario resolver conflictos manualmente\e[0m"
     ;;
 
   128)
