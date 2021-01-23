@@ -17,7 +17,7 @@ fi
 pull=$(git pull origin master)
 pullStatusCode=$?
 
-case $code in
+case $pullStatusCode in
 
   0)
     echo -e "\e[32mMerge Automatico realizado exitosamente...\e[0m"
