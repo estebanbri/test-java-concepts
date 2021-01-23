@@ -11,7 +11,7 @@ case $code in
     echo "Merge Automatico realizado exitosamente..."
     echo "Pusheando commits a rama $currentBranch"
     git push
-    exit 0
+    exit
     ;;
 
   1)
