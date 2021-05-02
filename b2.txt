@@ -1,2 +1,10 @@
----Linea 1 FileWriter (+ BufferWrite) ---
----Linea 2 FileWriter (+ BufferWriter) ---
+---Linea 1 FileWriter (+ BufferWrite) ---xxxx
+---Linea 2 FileWriter (+ BufferWriter) --- asd
+asd
+asdd
+aaa
+ab
+bbb
+ultimoo
+masi
+mesi
