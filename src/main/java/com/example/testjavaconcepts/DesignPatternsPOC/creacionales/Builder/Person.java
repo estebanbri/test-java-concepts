@@ -1,4 +1,4 @@
-package com.example.testjavaconcepts.BuilderPatternPOC;
+package com.example.testjavaconcepts.DesignPatternsPOC.creacionales.Builder;
 
 public class Person {
 

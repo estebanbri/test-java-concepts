@@ -1,4 +1,4 @@
-package com.example.testjavaconcepts.SingletonPOC;
+package com.example.testjavaconcepts.DesignPatternsPOC.creacionales.SingletonPOC;
 
 public class LazySingleton {
 
