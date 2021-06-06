@@ -19,15 +19,15 @@ objectos en memoria (usando estos conocimientos de los distintos bean scopes) qu
 - pepe tiene como empleados a  [Patricio, Pancracio]
 
 
-## En navegador CHROME ir a localhost:8080/manager/pepe/empleados
+## En navegador CHROME ir a localhost:8086/manager/pepe/empleados
 
 ![singleton-scope](http://url/to/img.png)
 
-## En navegador FIREFOX ir a localhost:8080/manager/jose/empleados
+## En navegador FIREFOX ir a localhost:8086/manager/jose/empleados
 
 ![request-scope](http://url/to/img.png)
 
-## En navegador CHROME ir a localhost:8080/manager/pepe/empleados
+## En navegador CHROME ir a localhost:8086/manager/pepe/empleados
 
 ![session-scope](http://url/to/img.png)
 --------
