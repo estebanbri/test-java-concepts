@@ -1,6 +1,6 @@
-package com.example.testjavaconcepts.SpringBeanScopesPOC.service.singleton.impl;
+package com.example.testjavaconcepts.SpringBeanScopesPOC.fecha.service.singleton.impl;
 
-import com.example.testjavaconcepts.SpringBeanScopesPOC.service.singleton.FechaSingletonService;
+import com.example.testjavaconcepts.SpringBeanScopesPOC.fecha.service.singleton.FechaSingletonService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

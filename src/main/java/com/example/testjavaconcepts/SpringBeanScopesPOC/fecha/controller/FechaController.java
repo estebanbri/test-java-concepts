@@ -1,8 +1,8 @@
-package com.example.testjavaconcepts.SpringBeanScopesPOC.controller;
+package com.example.testjavaconcepts.SpringBeanScopesPOC.fecha.controller;
 
-import com.example.testjavaconcepts.SpringBeanScopesPOC.service.request.FechaRequestService;
-import com.example.testjavaconcepts.SpringBeanScopesPOC.service.session.FechaSessionService;
-import com.example.testjavaconcepts.SpringBeanScopesPOC.service.singleton.FechaSingletonService;
+import com.example.testjavaconcepts.SpringBeanScopesPOC.fecha.service.request.FechaRequestService;
+import com.example.testjavaconcepts.SpringBeanScopesPOC.fecha.service.session.FechaSessionService;
+import com.example.testjavaconcepts.SpringBeanScopesPOC.fecha.service.singleton.FechaSingletonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

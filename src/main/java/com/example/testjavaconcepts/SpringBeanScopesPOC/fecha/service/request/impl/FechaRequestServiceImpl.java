@@ -1,6 +1,6 @@
-package com.example.testjavaconcepts.SpringBeanScopesPOC.service.request.impl;
+package com.example.testjavaconcepts.SpringBeanScopesPOC.fecha.service.request.impl;
 
-import com.example.testjavaconcepts.SpringBeanScopesPOC.service.request.FechaRequestService;
+import com.example.testjavaconcepts.SpringBeanScopesPOC.fecha.service.request.FechaRequestService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.RequestScope;
 

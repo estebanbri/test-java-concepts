@@ -1,6 +1,6 @@
-package com.example.testjavaconcepts.SpringBeanScopesPOC.service.session.impl;
+package com.example.testjavaconcepts.SpringBeanScopesPOC.fecha.service.session.impl;
 
-import com.example.testjavaconcepts.SpringBeanScopesPOC.service.session.FechaSessionService;
+import com.example.testjavaconcepts.SpringBeanScopesPOC.fecha.service.session.FechaSessionService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 
