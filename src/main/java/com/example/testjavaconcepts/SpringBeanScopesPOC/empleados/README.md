@@ -21,15 +21,15 @@ objectos en memoria (usando estos conocimientos de los distintos bean scopes) qu
 
 ## En navegador CHROME ir a localhost:8086/manager/pepe/empleados
 
-![singleton-scope](http://url/to/img.png)
+![singleton-scope](https://github.com/estebanbri/test-java-concepts/blob/master/src/main/resources/img/bean-scopes/1.png)
 
 ## En navegador FIREFOX ir a localhost:8086/manager/jose/empleados
 
-![request-scope](http://url/to/img.png)
+![request-scope](https://github.com/estebanbri/test-java-concepts/blob/master/src/main/resources/img/bean-scopes/2.png)
 
 ## En navegador CHROME ir a localhost:8086/manager/pepe/empleados
 
-![session-scope](http://url/to/img.png)
+![session-scope](https://github.com/estebanbri/test-java-concepts/blob/master/src/main/resources/img/bean-scopes/3.png)
 --------
 
 ### Resumen de los Scopes de los beans:
