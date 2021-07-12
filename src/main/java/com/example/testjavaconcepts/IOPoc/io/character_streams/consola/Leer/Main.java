@@ -12,13 +12,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
         ScannerPOC();
-        BufferedReaderPOC();
+        //BufferedReaderPOC();
     }
     // Alternativa 1: Scanner
     public static void ScannerPOC(){
         Scanner sc = new Scanner(System.in);
+
         String input = sc.nextLine();
-        System.out.println(input);
+
+        while(!input.equals("exit")){
+            System.out.println(input);
+            input = sc.nextLine();
+        }
+
     }
     // Alternativa 2: InputStreamReader (+ BufferedReader)
     public static void BufferedReaderPOC() throws IOException {
