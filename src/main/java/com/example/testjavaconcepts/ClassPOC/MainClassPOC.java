@@ -17,19 +17,22 @@ public class MainClassPOC {
 
         Persona persona = new Persona(23L, "Auron");
 
-        // three ways to create Class object
+        // three ways equivalentes (ninguna es mejor que otra pero a partir de class literal es mas rapido) to create Class object
 
-        Class clazz = null;
+        Class<?> clazz = null;
 
+        /** Opcion 1:  Class.forName(String className) */
         try {
-            clazz = Class.forName("com.example.testjavaconcepts.ClassPOC.Persona"); // Class.forName(String className)
+            clazz = Class.forName("com.example.testjavaconcepts.ClassPOC.Persona");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
 
-        //clazz = Persona.class; // a partir de un 'class literal'
+        /** Opcion 2:  a partir de un 'class literal' */
+        //clazz = Persona.class;
 
-        //clazz = persona.getClass(); // creando un objeto Class a partir de una instancia viva usando getClass()
+        /** Opcion 3:  creando un objeto Class a partir de una instancia viva usando getClass()*/
+        //clazz = persona.getClass();
 
         System.out.println("*** extractDataFromClass ***");
         extractDataFromClass(clazz);
@@ -41,7 +44,7 @@ public class MainClassPOC {
     }
 
 
-    private static void extractDataFromClass(Class clazz) {
+    private static void extractDataFromClass(Class<?> clazz) {
         Objects.requireNonNull(clazz, "Non null");
         System.out.println("Package: " + clazz.getPackage()); // Package: package com.example.testjavaconcepts.ClassPOC
         System.out.println("SimpleName: " + clazz.getSimpleName()); // Persona
@@ -77,7 +80,7 @@ public class MainClassPOC {
         }
     }
 
-    private static void extractDataFromObject(Class clazz, Persona persona) {
+    private static void extractDataFromObject(Class<?> clazz, Persona persona) {
         Objects.requireNonNull(clazz, "Non null");
         try {
             Field field = clazz.getField("nombre");
