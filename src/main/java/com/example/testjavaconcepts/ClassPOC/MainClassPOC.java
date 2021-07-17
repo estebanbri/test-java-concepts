@@ -12,6 +12,8 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+// Nota: The primitive Java types (boolean, byte, char, short, int, long, float, and double), and the keyword void are also represented as Class objects
+// ex: int.class, void.class,...
 public class MainClassPOC {
     public static void main(String[] args) {
 
@@ -21,17 +23,32 @@ public class MainClassPOC {
 
         Class<?> clazz = null;
 
-        /** Opcion 1:  Class.forName(String className) */
+        //
+        // compile-time alternative
+        //
+
+        /** Opcion 1 (compile-time): 'class literal'
+         *   The class name for which Class object is to be created is determined at compile-time
+         */
+        //clazz = Persona.class;
+
+        //
+        // run-time alternatives
+        //
+
+        /** Opcion 2 (run-time): Class.forName(String className)
+         * Since class Class doesn’t contain any constructor, there is static factory method forName
+         * The class name for which Class object is to be created is determined at run-time
+         */
         try {
             clazz = Class.forName("com.example.testjavaconcepts.ClassPOC.Persona");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
 
-        /** Opcion 2:  a partir de un 'class literal' */
-        //clazz = Persona.class;
-
-        /** Opcion 3:  creando un objeto Class a partir de una instancia viva usando getClass()*/
+        /** Opcion 3 (run-time):  obj.getClass()
+         * The class name for which Class object is to be created is determined at run-time
+         */
         //clazz = persona.getClass();
 
         System.out.println("*** extractDataFromClass ***");
@@ -53,6 +70,7 @@ public class MainClassPOC {
         System.out.println("TypeName: " + clazz.getTypeName()); // com.example.testjavaconcepts.ClassPOC.Persona
         System.out.println("ClassLoader: " + clazz.getClassLoader()); // sun.misc.Launcher$AppClassLoader@18b4aac2
         System.out.println("DeclaredAnnotation: " + clazz.getDeclaredAnnotation(JsonInclude.class)); // @com.fasterxml.jackson.annotation.JsonInclude(valueFilter=class java.lang.Void, value=NON_EMPTY, content=ALWAYS, contentFilter=class java.lang.Void)
+        System.out.println("isAnnotationPresent: " + clazz.isAnnotationPresent(JsonInclude.class));
         System.out.println("Annotation: " + clazz.getAnnotation(JsonInclude.class)); // @com.fasterxml.jackson.annotation.JsonInclude(valueFilter=class java.lang.Void, value=NON_EMPTY, content=ALWAYS, contentFilter=class java.lang.Void)
         System.out.println("Constructors: " +  buildStringFromArray(clazz.getConstructors())); // public com.example.testjavaconcepts.ClassPOC.Persona(),public com.example.testjavaconcepts.ClassPOC.Persona(java.lang.Long,java.lang.String)
         try {
