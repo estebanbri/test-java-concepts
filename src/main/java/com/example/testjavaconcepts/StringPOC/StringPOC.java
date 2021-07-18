@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class StringPOC {
     public static void main(String[] args) {
-        charAtPOC();
+        charAt2POC();
     }
 
     private static void equalityPOC(){
@@ -18,6 +18,35 @@ public class StringPOC {
             System.out.println("Heredo de Object class");
         }
     }
+
+    private static void containsPOC(){
+        String languages = "Java-Python-HTML";
+        boolean result1 = languages.contains("HTML");
+        boolean result2 = languages.contains("Javascript");
+        System.out.println(result1);
+        System.out.println(result2);
+    }
+
+    private static void joinPOC(){
+        String[] languages = {"Java", "Python", "HTML"};
+        String result = String.join("-", languages);
+        System.out.println(result);
+    }
+
+    private static void replacePOC(){
+        String languages = "Java-Python-HTML";
+        String result = languages.replace("-", ",");
+        System.out.println(result);
+    }
+
+    private static void splitPOC(){
+        String languages = "Java-Python-HTML";
+        String[] arr = languages.split("-");
+        System.out.println(arr[0]);
+        System.out.println(arr[1]);
+        System.out.println(arr[2]);
+    }
+
 
     private static void indexOfPOC(){
         int index = "asd".indexOf("as");
@@ -79,6 +108,15 @@ public class StringPOC {
         String s = "Esteban";
         char c = s.charAt(1);
         System.out.println(c);   // s
+    }
 
+    private static void charAt2POC(){
+        String nombre = "Esteban";
+        int i = 0;
+        while(i < nombre.length()) {
+            char c = nombre.charAt(i);
+            System.out.println(c);
+            i++;
+        }
     }
 }
